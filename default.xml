@@ -5,8 +5,7 @@
   <remote  name="x86"
            fetch="https://pt.osdn.net/projects/android-x86/scm/git/manifest/blobs/honeycomb-x86/" />
   <remote  name="google"
-           fetch="https://android.googlesource.com/" />
-           revision="gingerbread" />
+           fetch="https://android.googlesource.com/" revision="gingerbread" />
   <default revision="refs/tags/HLK75D" remote="aosp" sync-j="1" />
 
   <!-- From x86 port repositories -->
