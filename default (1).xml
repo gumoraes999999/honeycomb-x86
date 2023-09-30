@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <remote  name="aosp"
+           fetch="git://android-x86.git.sf.net/gitroot/android-x86/korg/" />
+  <remote  name="x86"
+           fetch="https://pt.osdn.net/projects/android-x86/scm/git/manifest/blobs/honeycomb-x86/" />
+  <remote  name="google"
+           fetch="https://android.googlesource.com/" />
+           revision="gingerbread" />
+  <default revision="refs/tags/HLK75D" remote="aosp" sync-j="1" />
+
+  <!-- From x86 port repositories -->
+  <project path="build" name="platform/build" remote="x86" revision="honeycomb-x86" >
+    <copyfile src="core/root.mk" dest="Makefile" />
+  </project>
+  <project path="kernel" name="kernel/common" remote="x86" revision="android-3.0.1" />
+  <project path="bionic" name="platform/bionic" remote="x86" revision="honeycomb-x86" />
+  <project path="bootable/newinstaller" name="platform/bootable/newinstaller" remote="x86" revision="honeycomb-x86" />
+  <project path="dalvik" name="platform/dalvik" remote="x86" revision="honeycomb-x86" />
+  <project path="development" name="platform/development" remote="x86" revision="honeycomb-x86" />
+  <project path="device/amd" name="device/amd" remote="x86" revision="honeycomb-x86" />
+  <project path="device/asus/eeepc" name="device/asus/eeepc" remote="x86" revision="honeycomb-x86" />
+  <project path="device/asus/laptop" name="device/asus/laptop" remote="x86" revision="honeycomb-x86" />
+  <project path="device/common" name="device/common" remote="x86" revision="honeycomb-x86" />
+  <project path="device/hp/tx2500" name="device/hp/tx2500" remote="x86" revision="honeycomb-x86" />
+  <project path="device/lenovo/s103t" name="device/lenovo/s103t" remote="x86" revision="honeycomb-x86" />
+  <project path="device/tegatech/tegav2" name="device/tegatech/tegav2" remote="x86" revision="honeycomb-x86" />
+  <project path="device/vm/vm" name="device/vm/vm" remote="x86" revision="honeycomb-x86" />
+  <project path="external/alsa-lib" name="platform/external/alsa-lib" remote="x86" revision="honeycomb-x86" />
+  <project path="external/alsa-utils" name="platform/external/alsa-utils" remote="x86" revision="honeycomb-x86" />
+  <project path="external/busybox" name="platform/external/busybox" remote="x86" revision="honeycomb-x86" />
+  <project path="external/drm" name="platform/external/drm" remote="x86" revision="honeycomb-x86" />
+  <project path="external/mesa" name="platform/external/mesa" remote="x86" revision="honeycomb-x86" />
+  <project path="external/ppp" name="platform/external/ppp" remote="x86" revision="honeycomb-x86" />
+  <project path="external/tslib" name="platform/external/tslib" remote="x86" revision="honeycomb-x86" />
+  <project path="external/v86d" name="platform/external/v86d" remote="x86" revision="honeycomb-x86" />
+  <project path="external/wpa_supplicant_6" name="platform/external/wpa_supplicant_6" remote="x86" revision="honeycomb-x86" />
+  <project path="frameworks/base" name="platform/frameworks/base" remote="x86" revision="honeycomb-x86" />
+  <project path="hardware/alsa_sound" name="platform/hardware/alsa_sound" remote="x86" revision="honeycomb-x86" />
+  <project path="hardware/drm_gralloc" name="platform/hardware/drm_gralloc" remote="x86" revision="honeycomb-x86" />
+  <project path="hardware/gps" name="platform/hardware/gps" remote="x86" revision="honeycomb-x86" />
+  <project path="hardware/libhardware" name="platform/hardware/libhardware" remote="x86" revision="honeycomb-x86" />
+  <project path="hardware/libhardware_legacy" name="platform/hardware/libhardware_legacy" remote="x86" revision="honeycomb-x86" />
+  <project path="hardware/libsensors" name="platform/hardware/libsensors" remote="x86" revision="honeycomb-x86" />
+  <project path="packages/apps/AndroidTerm" name="platform/packages/apps/AndroidTerm" remote="x86" revision="honeycomb-x86" />
+  <project path="packages/apps/FileManager" name="platform/packages/apps/FileManager" remote="x86" revision="honeycomb-x86" />
+  <project path="packages/apps/Settings" name="platform/packages/apps/Settings" remote="x86" revision="honeycomb-x86" />
+  <project path="prebuilt" name="platform/prebuilt" remote="x86" revision="honeycomb-x86" />
+  <project path="sdk" name="platform/sdk" remote="x86" revision="honeycomb-x86" />
+  <project path="system/bluetooth" name="platform/system/bluetooth" remote="x86" revision="honeycomb-x86" />
+  <project path="system/core" name="platform/system/core" remote="x86" revision="honeycomb-x86" />
+  <project path="system/extras" name="platform/system/extras" remote="x86" revision="honeycomb-x86" />
+  <project path="system/vold" name="platform/system/vold" remote="x86" revision="honeycomb-x86" />
+
+  <!-- BEGIN open-source projects -->
+
+  <project path="bootable/bootloader/legacy" name="platform/bootable/bootloader/legacy" remote="google" />
+  <project path="bootable/recovery" name="platform/bootable/recovery" remote="google" />
+  <project path="device/sample" name="device/sample" revision="master" remote="google" />
+  <project path="external/android-mock" name="platform/external/android-mock" remote="google" />
+  <project path="external/apache-http" name="platform/external/apache-http" remote="google" />
+  <project path="external/apache-xml" name="platform/external/apache-xml" remote="google" />
+  <project path="external/astl" name="platform/external/astl" remote="google" />
+  <project path="external/bison" name="platform/external/bison" remote="google" />
+  <project path="external/blktrace" name="platform/external/blktrace" remote="google" />
+  <project path="external/bluetooth/bluez" name="platform/external/bluetooth/bluez" remote="google" />
+  <project path="external/bluetooth/glib" name="platform/external/bluetooth/glib" remote="google" />
+  <project path="external/bluetooth/hcidump" name="platform/external/bluetooth/hcidump" remote="google" />
+  <project path="external/bouncycastle" name="platform/external/bouncycastle" remote="google" />
+  <project path="external/bsdiff" name="platform/external/bsdiff" remote="google" />
+  <project path="external/bzip2" name="platform/external/bzip2" remote="google" />
+  <project path="external/chromium" name="platform/external/chromium" remote="google" />
+  <project path="external/clang" name="platform/external/clang" remote="google" />
+  <project path="external/collada" name="platform/external/collada" remote="google" />
+  <project path="external/dbus" name="platform/external/dbus" remote="google" />
+  <project path="external/dhcpcd" name="platform/external/dhcpcd" remote="google" />
+  <project path="external/dnsmasq" name="platform/external/dnsmasq" remote="google" />
+  <project path="external/doclava" name="platform/external/doclava" remote="google" />
+  <project path="external/dropbear" name="platform/external/dropbear" remote="google" />
+  <project path="external/e2fsprogs" name="platform/external/e2fsprogs" remote="google" />
+  <project path="external/easymock" name="platform/external/easymock" remote="google" />
+  <project path="external/elfcopy" name="platform/external/elfcopy" remote="google" />
+  <project path="external/elfutils" name="platform/external/elfutils" remote="google" />
+  <project path="external/embunit" name="platform/external/embunit" remote="google" />
+  <project path="external/emma" name="platform/external/emma" remote="google" />
+  <project path="external/esd" name="platform/external/esd" remote="google" />
+  <project path="external/expat" name="platform/external/expat" remote="google" />
+  <project path="external/fdlibm" name="platform/external/fdlibm" remote="google" />
+  <project path="external/flac" name="platform/external/flac" remote="google" />
+  <project path="external/freetype" name="platform/external/freetype" remote="google" />
+  <project path="external/fsck_msdos" name="platform/external/fsck_msdos" remote="google" />
+  <project path="external/genext2fs" name="platform/external/genext2fs" remote="google" />
+  <project path="external/giflib" name="platform/external/giflib" remote="google" />
+  <project path="external/google-diff-match-patch" name="platform/external/google-diff-match-patch" remote="google" />
+  <project path="external/grub" name="platform/external/grub" remote="google" />
+  <project path="external/gtest" name="platform/external/gtest" remote="google" />
+  <project path="external/guava" name="platform/external/guava" remote="google" />
+  <project path="external/harfbuzz" name="platform/external/harfbuzz" remote="google" />
+  <project path="external/hsqldb" name="platform/external/hsqldb" remote="google" />
+  <project path="external/hyphenation" name="platform/external/hyphenation" remote="google" />
+  <project path="external/icu4c" name="platform/external/icu4c" remote="google" />
+  <project path="external/iproute2" name="platform/external/iproute2" remote="google" />
+  <project path="external/ipsec-tools" name="platform/external/ipsec-tools" remote="google" />
+  <project path="external/iptables" name="platform/external/iptables" remote="google" />
+  <project path="external/javassist" name="platform/external/javassist" remote="google" />
+  <project path="external/jdiff" name="platform/external/jdiff" remote="google" />
+  <project path="external/jhead" name="platform/external/jhead" remote="google" />
+  <project path="external/jpeg" name="platform/external/jpeg" remote="google" />
+  <project path="external/jsilver" name="platform/external/jsilver" remote="google" />
+  <project path="external/jsr305" name="platform/external/jsr305" remote="google" />
+  <project path="external/junit" name="platform/external/junit" remote="google" />
+  <project path="external/libffi" name="platform/external/libffi" remote="google" />
+  <project path="external/libgsm" name="platform/external/libgsm" remote="google" />
+  <project path="external/libnfc-nxp" name="platform/external/libnfc-nxp" remote="google" />
+  <project path="external/libpcap" name="platform/external/libpcap" remote="google" />
+  <project path="external/libphonenumber" name="platform/external/libphonenumber" remote="google" />
+  <project path="external/libpng" name="platform/external/libpng" remote="google" />
+  <project path="external/libvpx" name="platform/external/libvpx" remote="google" />
+  <project path="external/libxml2" name="platform/external/libxml2" remote="google" />
+  <project path="external/libxslt" name="platform/external/libxslt" remote="google" />
+  <project path="external/llvm" name="platform/external/llvm" remote="google" />
+  <project path="external/markdown" name="platform/external/markdown" remote="google" />
+  <project path="external/mesa3d" name="platform/external/mesa3d" remote="google" />
+  <project path="external/mtpd" name="platform/external/mtpd" remote="google" />
+  <project path="external/netcat" name="platform/external/netcat" remote="google" />
+  <project path="external/netperf" name="platform/external/netperf" remote="google" />
+  <project path="external/neven" name="platform/external/neven" remote="google" />
+  <project path="external/nist-sip" name="platform/external/nist-sip" remote="google" />
+  <project path="external/oauth" name="platform/external/oauth" remote="google" />
+  <project path="external/openssl" name="platform/external/openssl" remote="google" />
+  <project path="external/oprofile" name="platform/external/oprofile" remote="google" />
+  <project path="external/pcre" name="platform/external/pcre" remote="google" />
+  <project path="external/ping" name="platform/external/ping" remote="google" />
+  <project path="external/ping6" name="platform/external/ping6" remote="google" />
+  <project path="external/proguard" name="platform/external/proguard" remote="google" />
+  <project path="external/protobuf" name="platform/external/protobuf" remote="google" />
+  <project path="external/quake" name="platform/external/quake" remote="google" />
+  <project path="external/safe-iop" name="platform/external/safe-iop" remote="google" />
+  <project path="external/skia" name="platform/external/skia" remote="google" />
+  <project path="external/sonivox" name="platform/external/sonivox" remote="google" />
+  <project path="external/speex" name="platform/external/speex" remote="google" />
+  <project path="external/sqlite" name="platform/external/sqlite" remote="google" />
+  <project path="external/srec" name="platform/external/srec" remote="google" />
+  <project path="external/stlport" name="platform/external/stlport" remote="google" />
+  <project path="external/strace" name="platform/external/strace" remote="google" />
+  <project path="external/svox" name="platform/external/svox" remote="google" />
+  <project path="external/tagsoup" name="platform/external/tagsoup" remote="google" />
+  <project path="external/tcpdump" name="platform/external/tcpdump" remote="google" />
+  <project path="external/tinyxml" name="platform/external/tinyxml" remote="google" />
+  <project path="external/tremolo" name="platform/external/tremolo" remote="google" />
+  <project path="external/v8" name="platform/external/v8" remote="google" />
+  <project path="external/valgrind" name="platform/external/valgrind" remote="google" />
+  <project path="external/webkit" name="platform/external/webkit" />
+  <project path="external/webp" name="platform/external/webp" remote="google" />
+  <project path="external/wpa_supplicant_8" name="platform/external/wpa_supplicant_8" remote="google" />
+  <project path="external/xmlwriter" name="platform/external/xmlwriter" remote="google" />
+  <project path="external/zlib" name="platform/external/zlib" remote="google" />
+  <project path="frameworks/compile/libbcc" name="platform/frameworks/compile/libbcc" remote="google" />
+  <project path="frameworks/compile/pixelflinger2" name="platform/frameworks/compile/pixelflinger2" remote="google" />
+  <project path="frameworks/compile/slang" name="platform/frameworks/compile/slang" remote="google" />
+  <project path="frameworks/ex" name="platform/frameworks/ex" remote="google" />
+  <project path="frameworks/media/libvideoeditor" name="platform/frameworks/media/libvideoeditor" remote="google" />
+  <project path="frameworks/opt/emoji" name="platform/frameworks/opt/emoji" remote="google" />
+  <project path="frameworks/opt/vcard" name="platform/frameworks/opt/vcard" remote="google" />
+  <project path="frameworks/support" name="platform/frameworks/support" remote="google" />
+  <project path="hardware/ril" name="platform/hardware/ril" remote="google" />
+  <project path="libcore" name="platform/libcore" remote="google" />
+  <project path="ndk" name="platform/ndk" remote="google" />
+  <project path="packages/apps/BasicSmsReceiver" name="platform/packages/apps/BasicSmsReceiver" remote="google" />
+  <project path="packages/apps/Bluetooth" name="platform/packages/apps/Bluetooth" remote="google" />
+  <project path="packages/apps/Browser" name="platform/packages/apps/Browser" remote="google" />
+  <project path="packages/apps/Calculator" name="platform/packages/apps/Calculator" remote="google" />
+  <project path="packages/apps/Calendar" name="platform/packages/apps/Calendar" remote="google" />
+  <project path="packages/apps/Camera" name="platform/packages/apps/Camera" remote="google" />
+  <project path="packages/apps/CertInstaller" name="platform/packages/apps/CertInstaller" remote="google" />
+  <project path="packages/apps/Contacts" name="platform/packages/apps/Contacts" remote="google" />
+  <project path="packages/apps/DeskClock" name="platform/packages/apps/DeskClock" remote="google" />
+  <project path="packages/apps/Email" name="platform/packages/apps/Email" remote="google" />
+  <project path="packages/apps/Exchange" name="platform/packages/apps/Exchange" remote="google" />
+  <project path="packages/apps/Gallery" name="platform/packages/apps/Gallery" remote="google" />
+  <project path="packages/apps/Gallery3D" name="platform/packages/apps/Gallery3D" remote="google" />
+  <project path="packages/apps/HTMLViewer" name="platform/packages/apps/HTMLViewer" remote="google" />
+  <project path="packages/apps/Launcher2" name="platform/packages/apps/Launcher2" remote="google" />
+  <project path="packages/apps/Mms" name="platform/packages/apps/Mms" remote="google" />
+  <project path="packages/apps/Music" name="platform/packages/apps/Music" remote="google" />
+  <project path="packages/apps/Nfc" name="platform/packages/apps/Nfc" remote="google" />
+  <project path="packages/apps/PackageInstaller" name="platform/packages/apps/PackageInstaller" remote="google" />
+  <project path="packages/apps/Phone" name="platform/packages/apps/Phone" remote="google" />
+  <project path="packages/apps/Protips" name="platform/packages/apps/Protips" remote="google" />
+  <project path="packages/apps/Provision" name="platform/packages/apps/Provision" remote="google" />
+  <project path="packages/apps/QuickSearchBox" name="platform/packages/apps/QuickSearchBox" remote="google" />
+  <project path="packages/apps/SoundRecorder" name="platform/packages/apps/SoundRecorder" remote="google" />
+  <project path="packages/apps/SpeechRecorder" name="platform/packages/apps/SpeechRecorder" remote="google" />
+  <project path="packages/apps/Stk" name="platform/packages/apps/Stk" remote="google" />
+  <project path="packages/apps/Tag" name="platform/packages/apps/Tag" remote="google" />
+  <project path="packages/apps/VideoEditor" name="platform/packages/apps/VideoEditor" remote="google" />
+  <project path="packages/apps/VoiceDialer" name="platform/packages/apps/VoiceDialer" remote="google" />
+  <project path="packages/experimental" name="platform/packages/experimental" remote="google" />
+  <project path="packages/inputmethods/LatinIME" name="platform/packages/inputmethods/LatinIME" remote="google" />
+  <project path="packages/inputmethods/OpenWnn" name="platform/packages/inputmethods/OpenWnn" remote="google" />
+  <project path="packages/inputmethods/PinyinIME" name="platform/packages/inputmethods/PinyinIME" remote="google" />
+  <project path="packages/providers/ApplicationsProvider" name="platform/packages/providers/ApplicationsProvider" remote="google" />
+  <project path="packages/providers/CalendarProvider" name="platform/packages/providers/CalendarProvider" remote="google" />
+  <project path="packages/providers/ContactsProvider" name="platform/packages/providers/ContactsProvider" remote="google" />
+  <project path="packages/providers/DownloadProvider" name="platform/packages/providers/DownloadProvider" remote="google" />
+  <project path="packages/providers/DrmProvider" name="platform/packages/providers/DrmProvider" remote="google" />
+  <project path="packages/providers/GoogleContactsProvider" name="platform/packages/providers/GoogleContactsProvider" remote="google" />
+  <project path="packages/providers/MediaProvider" name="platform/packages/providers/MediaProvider" remote="google" />
+  <project path="packages/providers/TelephonyProvider" name="platform/packages/providers/TelephonyProvider" remote="google" />
+  <project path="packages/providers/UserDictionaryProvider" name="platform/packages/providers/UserDictionaryProvider" remote="google" />
+  <project path="packages/wallpapers/Basic" name="platform/packages/wallpapers/Basic" remote="google" />
+  <project path="packages/wallpapers/HoloSpiral" name="platform/packages/wallpapers/HoloSpiral" remote="google" />
+  <project path="packages/wallpapers/LivePicker" name="platform/packages/wallpapers/LivePicker" remote="google" />
+  <project path="packages/wallpapers/MagicSmoke" name="platform/packages/wallpapers/MagicSmoke" remote="google" />
+  <project path="packages/wallpapers/MusicVisualization" name="platform/packages/wallpapers/MusicVisualization" remote="google" />
+  <project path="system/media" name="platform/system/media" remote="google" />
+  <project path="system/netd" name="platform/system/netd" remote="google" />
+
+  <!-- END open-source projects -->
+
+</manifest>
